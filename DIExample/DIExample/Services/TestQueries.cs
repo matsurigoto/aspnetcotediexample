@@ -8,12 +8,20 @@ namespace DIExample.Services
     {
         public string GetName(string id)
         {
-            throw new NotImplementedException();
+            return "Duran";
         }
 
         public List<string> GetNames(string depId)
         {
-            throw new NotImplementedException();
+            List<string> result = new List<string>();
+            result.Add("Pete");
+            result.Add("Michael");
+            result.Add("Maze");
+            result.Add("Luke");
+            result.Add("Casey");
+            result.Add("Duran");
+
+            return result;
         }
     }
 }

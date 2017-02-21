@@ -1,8 +1,19 @@
-﻿@model HomeViewModel
+﻿@model DIExample.ViewModels.HomeViewModel
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <p>@Model.</p>
-    <p></p>
-    <p></p>
-    <p></p>
+    <p>--------------------------------------------</p>
+    <p>Emlpoyee name: @Model.employeeName</p>
+    <p>RD employees: 
+        @foreach(var employee in Model.employeeList)
+        {
+            <span> @employee </span>  
+        }
+    </p>
+    <p>--------------------------------------------</p>
+    <p>Web Site Name: @Model.webSiteInfo.SiteName</p>
+    <p>Description: @Model.webSiteInfo.Description</p>
+    <p>--------------------------------------------</p>
+    <p>Finance WebAPI Name: @Model.financeWebAPIConfig.SiteName</p>
+    <p>IP: @Model.financeWebAPIConfig.IP</p>
+    <p>URL: @Model.financeWebAPIConfig.Url</p>
 </div>

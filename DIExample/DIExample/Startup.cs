@@ -1,4 +1,6 @@
-﻿using DIExample.Models;
+﻿using DIExample.Interfaces;
+using DIExample.Models;
+using DIExample.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -31,7 +33,8 @@ namespace DIExample
             // Add framework services.
             services.AddMvc();
 
-
+            // Own Service
+            services.AddTransient<ITestQueries, TestQueries>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
